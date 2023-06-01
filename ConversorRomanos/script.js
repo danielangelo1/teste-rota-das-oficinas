@@ -42,6 +42,7 @@ function arabicToRoman(arabicNumber) {
 
 function romanToArabic(romanNumber) {
   let arabicNumber = 0;
+  romanNumber = romanNumber.toUpperCase();
   for (let i = 0; i < numbers.length; i++) {
     while (romanNumber.indexOf(numbers[i].roman) === 0) {
       arabicNumber += numbers[i].number;

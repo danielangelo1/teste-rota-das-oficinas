@@ -6,8 +6,17 @@ main {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 3rem;
   margin-bottom: 20px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+h1 a:hover::after {
+  content: "👈";
 }
 
 p {
