@@ -26,9 +26,14 @@ romanInput.addEventListener("input", (e) => {
 
 function arabicToRoman(arabicNumber) {
   let romamNumber = "";
-  if (arabicNumber > 3999 || arabicNumber < 0)
-    alert("O número deve estar entre 1 e 3999");
-  else {
+  if (arabicNumber > 3999 || arabicNumber < 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "O número digitado deve estar entre 1 e 3999!",
+    });
+    arabicInput.value = "";
+  } else {
     for (let i = 0; i < numbers.length; i++) {
       if (numbers[i].number <= arabicNumber) {
         romamNumber += numbers[i].roman;

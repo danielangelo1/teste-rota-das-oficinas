@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
     <title>Jogo da Vida</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav aria-label="primaria">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../ConversorRomanos/index.html">Conversor</a></li>
-            <li class="active"><a href="./">Jogo da Vida</a></li>
-            <li><a href="../Calculadora/index.html">Calculadora</a></li>
-        </ul>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../ConversorRomanos/index.html">Conversor</a></li>
+        <li class="active"><a href="./">Jogo da Vida</a></li>
+        <li><a href="../Calculadora/index.html">Calculadora</a></li>
+      </ul>
     </nav>
-</body>
 
+    <main>
+      <h1>Jogo da Vida de Conway</h1>
+      <div id="grid"></div>
+      <div id="controls">
+        <button id="start">Iniciar</button>
+        <button id="stop">Parar</button>
+        <button id="reset">Reiniciar</button>
+      </div>
+      <div id="regras">
+        <h2>Regras</h2>
+        <p>
+          1. Qualquer célula viva com menos de dois vizinhos vivos morre de
+          solidão.
+        </p>
+        <p>
+          2. Qualquer célula viva com mais de três vizinhos vivos morre de
+          superpopulação.
+        </p>
+        <p>
+          3. Qualquer célula morta com exatamente três vizinhos vivos se torna
+          uma célula viva.
+        </p>
+        <p>
+          4. Qualquer célula viva com dois ou três vizinhos vivos continua no
+          mesmo estado para a próxima geração.
+        </p>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
 </html>
