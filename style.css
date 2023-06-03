@@ -48,3 +48,21 @@ p {
 .projetos li a:hover {
   color: white;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .projetos li a {
+    font-size: 1rem;
+  }
+}
