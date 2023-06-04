@@ -49,6 +49,18 @@ p {
   color: white;
 }
 
+.socialMedias {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.socialMedias img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
 @media (max-width: 768px) {
   main {
     padding: 20px;

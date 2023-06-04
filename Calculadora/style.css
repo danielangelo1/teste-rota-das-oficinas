@@ -1,1 +1,116 @@
 @import "../css/header.css";
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.container {
+  width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select,
+.input-group button {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input-group select {
+  width: 50%;
+}
+
+.input-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+}
+
+#addCliente {
+  margin-left: 5px;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 786px) {
+  .container {
+    margin-top: 40px;
+  }
+  .input-group input,
+  .input-group select,
+  .input-group button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+}

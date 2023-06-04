@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="../css/logo.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
     <title>Calculadora</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav aria-label="primaria">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../ConversorRomanos/index.html">Conversor</a></li>
-            <li><a href="../JogoDaVida/index.html">Jogo da Vida</a></li>
-            <li class="active"><a href="./">Calculadora</a></li>
-        </ul>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../ConversorRomanos/index.html">Conversor</a></li>
+        <li><a href="../JogoDaVida/index.html">Jogo da Vida</a></li>
+        <li class="active"><a href="./">Calculadora</a></li>
+      </ul>
     </nav>
 
-    <h1>Formulário com 3 Inputs</h1>
-        <label for="input1">Input 1:</label>
-        <input type="text" id="input1" name="input1" required>
-        
-        <label for="input2">Input 2:</label>
-        <input type="text" id="input2" name="input2" required>
-        
-        <label for="input3">Input 3:</label>
-        <input type="text" id="input3" name="input3" required>
-        
-        <button type="submit">Enviar</button>
+    <h1>Divisão de Conta</h1>
+    <main>
+      <div class="container">
+        <div class="products">
+          <h3>Produtos</h3>
+          <div class="input-group">
+            <input
+              type="text"
+              class="product-name"
+              placeholder="Nome do Produto"
+            />
+            <input
+              type="number"
+              class="product-price"
+              placeholder="Preço Unitário"
+            />
+            <input
+              type="number"
+              class="product-quantity"
+              placeholder="Quantidade"
+            />
+            <button onclick="addProduct()">Adicionar Produto</button>
+          </div>
+        </div>
 
-</body>
-<script src="./script.js"></script>
+        <div class="customers">
+          <h3>Clientes</h3>
+          <div class="input-group">
+            <input
+              type="text"
+              class="customer-name"
+              placeholder="Nome do Cliente"
+            />
+            <select class="customer-products" multiple></select>
+            <input type="checkbox" class="service-charge" />
+            <label for="service-charge">Taxa de Serviço (10%)</label>
+            <button id="addCliente" onclick="addCustomer()">
+              Adicionar Cliente
+            </button>
+          </div>
+          <p>
+            Obs: É possivel selecionar mais de um produto segurando a tecla CTRL
+          </p>
+        </div>
 
+        <button class="btn" onclick="calculate()">Calcular</button>
+
+        <div class="output" id="output"></div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
